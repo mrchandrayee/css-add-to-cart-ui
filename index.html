@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Add to Cart UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header class="page-header">
+    <h1>CSS Add to Cart UI</h1>
+    <div class="cart-counter" aria-live="polite">Cart <span id="cartCount">0</span></div>
+  </header>
+
+  <section class="demo-list" aria-label="Add to cart button animations">
+    <article class="demo-card">
+      <h2>Sliding Cart Animation</h2>
+      <div class="demo-body">
+        <div class="preview">
+          <button class="cart-btn btn1" data-demo="slide" type="button"><span class="btn-label">Add To Cart</span><span class="cart-icon" aria-hidden="true">🛒</span></button>
+        </div>
+        <pre><code>.btn1:hover::before {
+  left: 185px;
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="demo-card">
+      <h2>Gradient Fill Button</h2>
+      <div class="demo-body">
+        <div class="preview">
+          <button class="cart-btn btn2" data-demo="gradient" type="button"><span class="btn-label">Add To Cart</span></button>
+        </div>
+        <pre><code>.btn2:hover::before {
+  width: 100%;
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="demo-card">
+      <h2>Success Tick Animation</h2>
+      <div class="demo-body">
+        <div class="preview">
+          <button class="cart-btn btn3" data-demo="success" type="button">
+            <span class="btn-label">Add To Cart</span><span class="done" aria-hidden="true">✓ Added</span>
+          </button>
+        </div>
+        <pre><code>.btn3:hover .done {
+  transform: translate(-50%, -50%);
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="demo-card">
+      <h2>Shine Sweep Animation</h2>
+      <div class="demo-body">
+        <div class="preview">
+          <button class="cart-btn btn4" data-demo="shine" type="button"><span class="btn-label">Add To Cart</span></button>
+        </div>
+        <pre><code>.btn4:hover::before {
+  left: 300px;
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="demo-card">
+      <h2>Expanding Bubble Cart</h2>
+      <div class="demo-body">
+        <div class="preview">
+          <button class="cart-btn btn5" data-demo="bubble" type="button"><span class="circle" aria-hidden="true"></span><span class="btn-label">Add To Cart</span></button>
+        </div>
+        <pre><code>.btn5:hover .circle {
+  width: 240px;
+}</code></pre>
+      </div>
+    </article>
+  </section>
+
+  <section class="source-panel">
+    <div class="source-title"><span>style.css · visible declarations from the video</span><button id="copyCss" type="button">Copy CSS</button></div>
+    <pre><code id="cssSnippet">.btn1:hover::before {
+  left: 185px;
+}
+
+.btn2:hover::before {
+  width: 100%;
+}
+
+.btn3:hover .done {
+  transform: translate(-50%, -50%);
+}
+
+.btn4:hover::before {
+  left: 300px;
+}
+
+.btn5:hover .circle {
+  width: 240px;
+}</code></pre>
+  </section>
+  <p class="note">Hover or tap a button to preview its effect. Click again to reset.</p>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
